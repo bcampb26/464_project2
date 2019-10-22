@@ -7,6 +7,7 @@ from sim_functions.basic_sim import basic_sim
 from sim_functions.net_read import netRead
 from sim_functions.print_ckt import printCkt
 from sim_functions.input_read import inputRead
+from sim_functions.lfsr import lfsr_fun
 
 
 def faultListGeneration():
@@ -142,10 +143,9 @@ def faultSimulation():
 
 
 def main():
-    print("What would you like to do? (0/1/2):")
+    print("What would you like to do? (0/1:")
     print("0: Fault Simulation")
     print("1: Fault List Generation")
-    print("2: Basic Simulation")
     userSimulationChoice = input()
 
     if userSimulationChoice.strip() == "0":
@@ -154,10 +154,6 @@ def main():
     elif userSimulationChoice.strip() == "1":
         faultListGeneration()
         return
-
-    if userSimulationChoice.strip() != "2":
-        raise NotImplementedError
-
     # **************************************************************************************************************** #
     # NOTE: UI code; Does not contain anything about the actual simulation
 
