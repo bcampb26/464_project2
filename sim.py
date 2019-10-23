@@ -8,7 +8,7 @@ from sim_functions.net_read import netRead
 from sim_functions.print_ckt import printCkt
 from sim_functions.input_read import inputRead
 from sim_functions.lfsr import lfsr_fun
-
+from sim_functions.lfsr_arrE import lfsr_E
 
 def faultListGeneration():
     script_dir = os.path.dirname(__file__)
@@ -147,8 +147,11 @@ def main():
     
     ####
     usr_inpt_S0 = '80'
-    lfst_arr = lfsr_fun(usr_inpt_S0)
-    print (lfst_arr)
+    #### lfsr array - array of length 260 - with every index - byte - sequence of lfsr, with bits 2,3,4 XORed 
+    lfsr_arr = lfsr_fun(usr_inpt_S0)
+    ####case E - returns an array of TV's  each 36 bit long, in string format
+    lfsr_arr_E = lfsr_E (lfsr_arr)
+
 
 
 
