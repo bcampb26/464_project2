@@ -143,6 +143,15 @@ def faultSimulation():
 
 
 def main():
+
+    
+    ####
+    usr_inpt_S0 = '80'
+    lfst_arr = lfsr_fun(usr_inpt_S0)
+    print (lfst_arr)
+
+
+
     print("What would you like to do? (0/1:")
     print("0: Fault Simulation")
     print("1: Fault List Generation")
