@@ -8,7 +8,11 @@ from sim_functions.net_read import netRead
 from sim_functions.print_ckt import printCkt
 from sim_functions.input_read import inputRead
 from sim_functions.lfsr import lfsr_fun
-from sim_functions.lfsr_arrE import lfsr_E
+# from sim_functions.TV_arrA import TV_A
+# from sim_functions.TV_arrB import TV_B
+#from sim_functions.TV_arrC import TV_C
+from sim_functions.TV_arrD import lfsr_D
+from sim_functions.TV_arrE import lfsr_E
 
 def faultListGeneration():
     script_dir = os.path.dirname(__file__)
@@ -149,8 +153,24 @@ def main():
     usr_inpt_S0 = '80'
     #### lfsr array - array of length 260 - with every index - byte - sequence of lfsr, with bits 2,3,4 XORed 
     lfsr_arr = lfsr_fun(usr_inpt_S0)
+    
+    
+    
+    
+    ####case A - returns an array of TV's  each 36 bit long, in string format
+    #TV_arr_A = lfsr_D (lfsr_arr)  
+    #   
+    ####case B - returns an array of TV's  each 36 bit long, in string format
+    #TV_arr_B = lfsr_D (lfsr_arr)
+
+    ####case C - returns an array of TV's  each 36 bit long, in string format
+    #TV_arr_C = TV_C (usr_inpt_S0)
+
+    ####case D - returns an array of TV's  each 36 bit long, in string format
+    TV_arr_D = lfsr_D (lfsr_arr)
+
     ####case E - returns an array of TV's  each 36 bit long, in string format
-    lfsr_arr_E = lfsr_E (lfsr_arr)
+    TV_arr_E = lfsr_E (lfsr_arr)
 
 
 
