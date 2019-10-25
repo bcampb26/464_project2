@@ -10,7 +10,7 @@ from sim_functions.input_read import inputRead
 from sim_functions.lfsr import lfsr_fun
 # from sim_functions.TV_arrA import TV_A
 # from sim_functions.TV_arrB import TV_B
-#from sim_functions.TV_arrC import TV_C
+from sim_functions.TV_arrC import TV_C
 from sim_functions.TV_arrD import lfsr_D
 from sim_functions.TV_arrE import lfsr_E
 
@@ -158,13 +158,13 @@ def main():
     
     
     ####case A - returns an array of TV's  each 36 bit long, in string format
-    #TV_arr_A = lfsr_D (lfsr_arr)  
+    #TV_arr_A =  TV_D (usr_inpt_S0)  
     #   
     ####case B - returns an array of TV's  each 36 bit long, in string format
-    #TV_arr_B = lfsr_D (lfsr_arr)
+    #TV_arr_B = TV_D (usr_inpt_S0)
 
     ####case C - returns an array of TV's  each 36 bit long, in string format
-    #TV_arr_C = TV_C (usr_inpt_S0)
+    TV_arr_C = TV_C (usr_inpt_S0)
 
     ####case D - returns an array of TV's  each 36 bit long, in string format
     TV_arr_D = lfsr_D (lfsr_arr)
