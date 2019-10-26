@@ -12,7 +12,8 @@ def lfsr_fun(usr_S0):
     res = res_reversed
     #declare an array to keep all the randomized bytes
     lfsr_arr = [0] * 260
-    for i in range (0,260):
+    lfsr_arr[0]= res
+    for i in range (1,260):
 
         Temp_res = [0,0,0,0,0,0,0,0]
         TempS = res[7]
