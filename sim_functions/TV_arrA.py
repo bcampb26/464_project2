@@ -10,6 +10,12 @@ def TV_A(usr_input):
     res = bin(int(usr_input, 16)).zfill(8) 
     res = res[2:] 
     res_int = int (res,2)
+    #reverse string
+    stringlength=len(res) # calculate length of the list
+    res_reversed=res[stringlength::-1] # slicing 
+    res = res_reversed
+
+
     ctr_arr[0] = res
     for i in range(1,260):
         res_int = res_int +1
