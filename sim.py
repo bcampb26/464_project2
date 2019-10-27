@@ -62,6 +62,7 @@ def faultListGeneration():
                 break
 
     saveFaultList(faultList, f'./{outputFile}')
+    return faultList
 
 
 def faultSimulation():
@@ -180,7 +181,7 @@ def main():
         faultSimulation()
         return
     elif userSimulationChoice.strip() == "1":
-        faultListGeneration()
+        faultlist = faultListGeneration()
         return
     # **************************************************************************************************************** #
     # NOTE: UI code; Does not contain anything about the actual simulation
