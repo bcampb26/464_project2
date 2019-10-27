@@ -3,6 +3,4 @@
 # input.txt
 # assuming INPUT ordered
 # from LSB to MSB: CBA =
-010
-111
-011
+000000000000000000000000000000000001
